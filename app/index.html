@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>Radio Button Test</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="./app.css" >
+  </head>
+
+  <body ng-app="app" layout="column" ng-controller="AppCtrl" ng-strict-di>
+    <md-toolbar layout="row">
+      <h1>Radio Button Test</h1>
+    </md-toolbar>
+
+    <div layout="column" flex class="content-wrapper" id="content">
+      <md-content layout="column" flex class="md-padding">
+	<form ng-submit="showAlert($event)" ng-controller="AppCtrl" >
+	  <div layout="row">
+	    <div flex>
+	      <p>Group1: <span class="radioValue">{{ data.group1 }}</span> </p>
+	      <md-radio-group ng-model="data.group1">
+		<md-radio-button value="Foo">Foo</md-radio-button>
+		<md-radio-button value="Bar">Bar</md-radio-button>
+		<md-radio-button value="Baz">Baz</md-radio-button>
+	      </md-radio-group>
+	    </div>
+	    <div flex>
+	      <p>Group1-Copy: <span class="radioValue">{{ data.group1 }}</span> </p>
+	      <md-radio-group ng-model="data.group1">
+		<md-radio-button value="Foo">Foo</md-radio-button>
+		<md-radio-button value="Bar">Bar</md-radio-button>
+		<md-radio-button value="Baz">Baz</md-radio-button>
+	      </md-radio-group>
+	    </div>
+	    <div flex>
+	      <p>Group1/Different Value: <span class="radioValue">{{ data.group1 }}</span> </p>
+	      <md-radio-group ng-model="data.group1">
+		<md-radio-button value="FOO">FOO</md-radio-button>
+		<md-radio-button value="BAR">BAR</md-radio-button>
+		<md-radio-button value="BAZ">BAZ</md-radio-button>
+	      </md-radio-group>
+	    </div>
+	  </div>
+	  <hr />
+	  <div layout="row">
+	    <div flex>
+	      <p>Group2/Same value with Group1: <span class="radioValue">{{ data.group2 }}</span> </p>
+	      <md-radio-group ng-model="data.group2">
+		<md-radio-button value="a">a</md-radio-button>
+		<md-radio-button value="b">b</md-radio-button>
+		<md-radio-button value="c">c</md-radio-button>
+	      </md-radio-group>
+	    </div>
+	  </div>
+	  <hr />
+	  <input type="submit" value="submit">
+	</form>
+      </md-content>
+    </div>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+
+    <script src="./app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+#content {
+    overflow: hidden;
+}
+
+#content md-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+.content-wrapper {
+    position: relative;
+}
+
+md-toolbar h1 {
+    margin: auto;
+    font-size: 1.250em;
+    font-weight: 400;
+}
+
+.radioValue {
+  margin-left: 5px;
+  color: #0f9d58;
+  font-weight: bold;
+}
